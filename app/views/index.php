@@ -51,17 +51,15 @@
     <!--angular controllers-->
     
         <script src="js/controllers/loginCtrl.js"></script>
-
-    <!-- <script src="js/controllers/postController.js"></script> -->
+        <script src="js/controllers/postCtrl.js"></script>
         
      
     
 
     <!--angular services-->
     <script src="js/services/authService.js"></script>
-    <!-- 
-        <script src="js/services/crudService.js"></script>
-     -->
+    <script src="js/services/crudService.js"></script>
+     
     
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->

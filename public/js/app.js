@@ -2,7 +2,7 @@
  * Created by jvoelkel on 5/5/14.
  */
 var app = angular.module('libreApp',[
-    'ngRoute',  'LoginCtrl', 'AuthSrvc'
+    'ngRoute',  'LoginCtrl', 'AuthSrvc', 'PostCtrl', 'CRUDSrvc'
 ]);
 
 app.run(function($rootScope,$location,Login){
@@ -11,7 +11,7 @@ app.run(function($rootScope,$location,Login){
         var loggedIn    = Login.checkLoginStatus();//boolean - if user is logged in
         var routeSafe = !$.inArray($location.path(),whiteList);//boolean - is route safe or protected
         if(!loggedIn && !routeSafe) {
-            $location.path('/');
+            $location.path('/dashboard');
             alert('You must be logged in to view this page!');
         }
     });
@@ -20,9 +20,14 @@ app.run(function($rootScope,$location,Login){
 //handle all of our routing
 app.config(function($routeProvider, $locationProvider){
 
-    $routeProvider.when('/',{
-       templateUrl:'js/templates/login.html',
-       controller:'LoginController'
+    $routeProvider
+        .when('/',{
+            templateUrl:'js/templates/login.html',
+            controller:'LoginController'
+    })
+        .when('/dashboard', {
+            templateUrl: 'js/templates/dashboard.html',
+            controller: 'PostController'
     });
 
     $locationProvider.html5Mode(true).hashPrefix('!');   
