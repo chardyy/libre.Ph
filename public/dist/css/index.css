@@ -1,0 +1,176 @@
+html{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	background: #f6f6f6;
+}
+
+body{
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+nav{
+	margin: 0px;
+	padding: 20px;
+	margin-bottom: 0 auto;
+}
+
+#header{
+	padding: 15px;
+}
+
+.navbar{
+	background: #fff;
+	border-bottom: 2px solid #fd4d4d;
+}
+
+#function-container{
+	padding-top: 8px;
+}
+
+#promotion-categories{
+	border: 1px solid #ccc;
+	background: #f6f6f6;
+	color: #363635;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+#promotion-categories option{
+	border-style: none;
+	background: #fff;
+	border-radius: 5px;	
+	color: #fd4d4d;
+}
+
+#menu{
+	background-color: #fff;
+	color: #363635;
+	border: 1px solid #ccc;
+}
+
+#menu:hover{
+	background: #fd4d4d;
+	color: #fff;
+}
+
+#menu:focus{
+	background: #fd4d4d;
+	color: #fff;
+}
+
+.dropdown-menu{
+	border: 1px solid #fd4d4d;
+	box-shadow: none;
+	background: #fff;
+	color: #fd4d4d;
+}
+
+.dropdown-menu li:hover{
+	background: #fd4d4d;
+	color: #fff;
+}
+
+#drop-login{
+	width: 300px !important;
+	height: 200px !important;
+}
+
+#page-top{
+	height: 100%;
+	width: 100%;
+	padding-top: 150px;
+	background: #f6f6f6;
+}
+
+#sides{
+	width: 100%;	
+}
+
+#promotion-cards{
+	background: #fff;
+	padding: 10px;
+	margin: 10px;
+	width: 80%;
+	border-top: 5px solid #fd4d4d;
+	border-radius: 5px;
+	box-shadow: 0px 1px 2px #ccc;
+}
+
+#promotion-img .img-responsive{
+	margin: 0 auto;
+	padding: 5px;
+
+}
+
+#promotion-buttons div{
+	text-align: center;
+
+}
+
+#promotion-buttons div a{
+	color: #ccc;
+}
+
+#promotion-buttons div a:hover{
+	color: #fd4d4d;
+}
+
+#call-to-action-promotion{
+	position: fixed;
+	width: 28%;
+	padding: 15px;
+	border-radius: 5px;
+	background: #fff;
+	box-shadow: 0px 1px 2px #ccc;
+}
+
+#call-to-action-promotion button{
+	text-align: center;
+	width: 80%;
+	color: #fff;
+	background: #fd4d4d;
+}
+
+#sidebar-categories{
+	position: fixed;
+	padding-top: 10px;
+	width: 30% !important;
+	color: #2c3e50;
+	margin-top: 120px;
+	
+}
+
+.todo-search{
+	background: #fd4d4d;
+	color: #fff;
+}
+
+#sidebar-search{
+	background: #fff;
+	color: #2c3e50;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+
+#sidebar-categories .todo{
+	box-shadow: 0px 1px 2px #ccc;
+}
+
+.todo ul li{
+	background: #fff;
+}
+
+.todo ul li h4{
+	color: #2c3e50;
+
+}
+
+
+
