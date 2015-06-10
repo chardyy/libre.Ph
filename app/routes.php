@@ -14,7 +14,7 @@
 Route::group(['prefix' => 'api'], function(){
 	Route::post('login/auth', 'AuthController@login');
 	Route::get('login/destroy', 'AuthController@logout');
-	Route::resource('posts','PostController');
+	Route::resource('posts','PostController', ['only' => ['store', 'index', 'show']]);
 });
 
 Route::get('/', function(){
