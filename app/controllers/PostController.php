@@ -2,6 +2,7 @@
 
 class PostController extends \BaseController {
 
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -16,6 +17,12 @@ class PostController extends \BaseController {
 
 
 
+	public function create()
+	{
+	    Post::create(Input::all());
+		return Response::json(['status' => 'saved']);
+		
+	}
 
 	/**
 	 * Store a newly created resource in storage.
@@ -31,9 +38,9 @@ class PostController extends \BaseController {
 		$product = Product::create([
 
 				'product_name' => Input::get('promo'),
+				'product_details'	=> Input::get('desc'),
 				'user_id'	=> 1,
-				'category_id'	=> Input::get('category'), 
-				'product_details'	=> Input::get('desc') 
+				'category_id'	=> Input::get('category') 
 			]);
 
 		return Response::json($product, 200);
@@ -57,19 +64,6 @@ class PostController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function create()
-	{
-        $new = new Product;
-        $new->product_name = Input::get('promo');
-        $new->product_details = Input::get('description');
-        $new->category_id = Input::get('category');
-        $new->user_id = 1;
-
-        if($new->save()){
-            return Response::json(['success' => true]);
-        }
-
-		return Response::json(['success' => false]);
-	}
+	
 
 }

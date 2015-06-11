@@ -11,9 +11,8 @@ var post = angular.module('PostCtrl',[]);
 
         $scope.submit = function(){
             var request = CRUD.create($scope.new);
-                request.success(function(response){
-                    $scope.flash = response.status;
-                    console.log('ERROR'); 
+                request.success(function(data){
+                    $scope.flash = data.status;
                 });
         };
 
