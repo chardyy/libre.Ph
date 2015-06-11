@@ -9,19 +9,12 @@ class PostController extends \BaseController {
 	 */
 	public function index()
 	{
+		$product = Product::orderBy('created_at', 'DESC')->take(5)->get();
 
+		return Response::json($product, 200);
 	}
 
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
 
 
 	/**
@@ -31,7 +24,7 @@ class PostController extends \BaseController {
 	 */
 	public function store()
 	{
-		if(!Input::has('new')){
+		if(!Input::has('promo')){
 			return Response::make('Bad Request', 400);
 		}
 
@@ -55,44 +48,7 @@ class PostController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$product = Product::findOrFail($id);
+		return Response::json($product, 200);
 	}
-
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
-
-
 }

@@ -20,3 +20,5 @@ Route::group(['prefix' => 'api'], function(){
 Route::get('/', function(){
 	return View::make('index');
 });
+
+

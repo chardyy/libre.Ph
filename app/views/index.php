@@ -52,6 +52,7 @@
     
         <script src="js/controllers/loginCtrl.js"></script>
         <script src="js/controllers/postCtrl.js"></script>
+        <script src="js/controllers/productCtrl.js"></script>
         
      
     

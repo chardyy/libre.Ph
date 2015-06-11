@@ -11,7 +11,7 @@ app.run(function($rootScope,$location,Login){
         var loggedIn    = Login.checkLoginStatus();//boolean - if user is logged in
         var routeSafe = !$.inArray($location.path(),whiteList);//boolean - is route safe or protected
         if(!loggedIn && !routeSafe) {
-            $location.path('/dashboard');
+            $location.path('/products');
             alert('You must be logged in to view this page!');
         }
     });
@@ -28,7 +28,11 @@ app.config(function($routeProvider, $locationProvider){
         .when('/dashboard', {
             templateUrl: 'js/templates/dashboard.html',
             controller: 'PostController'
-    });
+    })
+        .when('/products', {
+            templateUrl: 'js/templates/products.html',
+            controller: 'ProductsController'
+        });
 
     $locationProvider.html5Mode(true).hashPrefix('!');   
 });
