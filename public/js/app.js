@@ -2,7 +2,7 @@
  * Created by jvoelkel on 5/5/14.
  */
 var app = angular.module('libreApp',[
-    'ngRoute',  'LoginCtrl', 'AuthSrvc', 'PostCtrl', 'CRUDSrvc'
+    'ngRoute',  'LoginCtrl', 'AuthSrvc', 'PostCtrl', 'CRUDSrvc', 'ProductCtrl'
 ]);
 
 app.run(function($rootScope,$location,Login){

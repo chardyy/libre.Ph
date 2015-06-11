@@ -20,6 +20,12 @@
                       <a href="#"><span class="fui-plus"></span>follow</a>
                   </div>
               </div> 
+
+              <div>Your Products</div>
+              <div ng-repeat="product in product.products">
+                <p>{{ product.product_name }}</p>
+                <p>{{ product.product_details }}</p>
+              </div>
     </div>
   <div class="col-sm-4"></div>
 </div>
