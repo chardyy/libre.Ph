@@ -13,6 +13,7 @@ var post = angular.module('PostCtrl',[]);
             var request = CRUD.create($scope.new);
                 request.success(function(response){
                     $scope.flash = response.status;
+                    console.log('ERROR'); 
                 });
         };
 

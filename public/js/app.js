@@ -11,7 +11,7 @@ app.run(function($rootScope,$location,Login){
         var loggedIn    = Login.checkLoginStatus();//boolean - if user is logged in
         var routeSafe = !$.inArray($location.path(),whiteList);//boolean - is route safe or protected
         if(!loggedIn && !routeSafe) {
-            $location.path('/products');
+            $location.path('/dashboard');
             alert('You must be logged in to view this page!');
         }
     });

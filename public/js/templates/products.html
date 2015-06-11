@@ -1,12 +1,26 @@
 <div class="row">
-    <div id="promotion-cards" class="col-xs-12 col-sm-8">
-                 
+    <div id="promotion-cards" class="col-xs-12 col-sm-8" ng-repeat="product in products">
 
-              <div>Your Products</div>
-              <div ng-repeat="product in products">
-                <p>{{ product.product_name }}</p>
+                <a href="details"><img class="promotion-img img-responsive img-center" src="img/frappe.jpg"></a>
+                <strong>{{ product.product_name }}</strong>
                 <p>{{ product.product_details }}</p>
-              </div>
+                
+              <div id="promotion-buttons" class="col-sm-12">
+
+                  <div class="col-sm-4">
+                       <a href="#"><span class="fui-check"></span>
+                       avail</a>
+                  </div>
+
+                  <div class="col-sm-4">
+                      <a href="#"><span class="fui-new"></span>
+                      comments</a>
+                  </div>
+
+                  <div class="col-sm-4">
+                      <a href="#"><span class="fui-plus"></span>follow</a>
+                  </div>
+              </div> 
     </div>
   <div class="col-sm-4"></div>
 </div>

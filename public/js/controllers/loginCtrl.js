@@ -7,7 +7,7 @@ login.controller('LoginController',function($scope,$location,Login,SessionServic
             auth.success(function(response){
                if(response.id){
                    SessionService.set('auth',true); //This sets our session key/val pair as authenticated
-                   $location.path('/products');
+                   $location.path('/dashboard');
                }else alert('could not verify your login');
             });
     };

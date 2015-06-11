@@ -8,7 +8,7 @@ crud.factory("CRUD",function($http){
             return request;
         },
         create: function(data){
-            var request = $http({method:'GET', url:'api/posts/create',params:data});
+            var request = $http({method:'GET', url:'api/posts/create', params:data});
             return request;
         },
         get: function(id){

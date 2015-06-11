@@ -51,4 +51,25 @@ class PostController extends \BaseController {
 		$product = Product::findOrFail($id);
 		return Response::json($product, 200);
 	}
+
+	/**
+	 * Show the form for creating a new resource.
+	 *
+	 * @return Response
+	 */
+	public function create()
+	{
+        $new = new Product;
+        $new->product_name = Input::get('promo');
+        $new->product_details = Input::get('description');
+        $new->category_id = Input::get('category');
+        $new->user_id = 1;
+
+        if($new->save()){
+            return Response::json(['success' => true]);
+        }
+
+		return Response::json(['success' => false]);
+	}
+
 }
