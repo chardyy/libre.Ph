@@ -1,28 +1,9 @@
 <div class="row">
     <div id="promotion-cards" class="col-xs-12 col-sm-8">
-                <a href="details"><img class="promotion-img img-responsive img-center" src="img/frappe.jpg"></a>
-                <strong>Starbucks Frappucino</strong>
-                <p>First 120 persons to redeem gets to enjoy a Starbucks Frappucino</p>
-                
-              <div id="promotion-buttons" class="col-sm-12">
-
-                  <div class="col-sm-4">
-                       <a href="#"><span class="fui-check"></span>
-                       avail</a>
-                  </div>
-
-                  <div class="col-sm-4">
-                      <a href="#"><span class="fui-new"></span>
-                      comments</a>
-                  </div>
-
-                  <div class="col-sm-4">
-                      <a href="#"><span class="fui-plus"></span>follow</a>
-                  </div>
-              </div> 
+                 
 
               <div>Your Products</div>
-              <div ng-repeat="product in product.products">
+              <div ng-repeat="product in products">
                 <p>{{ product.product_name }}</p>
                 <p>{{ product.product_details }}</p>
               </div>
